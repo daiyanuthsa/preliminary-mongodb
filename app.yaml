@@ -1,0 +1,17 @@
+runtime: php83
+env: flex
+
+runtime_config:
+  document_root: public
+
+skip_files: .env
+
+env_variables:
+  APP_KEY: base64:bodTwwN7XZTXyWn0BkD/CbrXVWA3m0FR0eYhF8tBEec=
+  DB_CONNECTION: mongodb
+  DB_HOST: 34.143.251.175
+  DB_PORT: 27017
+  DB_DATABASE: coba_db
+  DB_USERNAME: admin
+  DB_PASSWORD: admin1234
+  
