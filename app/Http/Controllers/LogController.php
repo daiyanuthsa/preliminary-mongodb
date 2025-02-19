@@ -34,7 +34,7 @@ class LogController extends Controller
         $log = Log::create($data);
 
         // Mengembalikan respons atau data yang telah disimpan
-        return response()->json($log);
+        return response()->json($log, 200);
     }
     public function storeLoop($loop)
     {
@@ -60,7 +60,7 @@ class LogController extends Controller
         }
 
         // Mengembalikan respons atau data yang telah disimpan
-        return response()->json("success");
+        return response()->json(["success"], 200);
     }
 
 }
