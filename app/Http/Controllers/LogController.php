@@ -36,10 +36,10 @@ class LogController extends Controller
         // Mengembalikan respons atau data yang telah disimpan
         return response()->json($log);
     }
-    public function storeLoop()
+    public function storeLoop($loop)
     {
         // Membuat instance baru dari model Log dan menyimpan data
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < $loop; $i++) {
             $data = [
                 'created_at' => Carbon::now(),  // Update waktu untuk setiap log
                 'type' => 'query',
@@ -49,7 +49,7 @@ class LogController extends Controller
                         'find' => 'users',
                         'filter' => [
                             'wew' => [
-                                
+
                             ]
                         ]
                     ]

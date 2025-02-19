@@ -9,5 +9,5 @@ Route::get('/', function () {
 
 Route::prefix('/api')->group(function () {
     Route::get('/create', [LogController::class, 'storeLogData']);
-    Route::get('/loop', [LogController::class, 'storeLoop']);
+    Route::get('/create-log/{loop}', [LogController::class, 'storeLoop']);
 });
